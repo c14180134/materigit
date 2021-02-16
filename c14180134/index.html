@@ -13,12 +13,13 @@
 
     function dateminus(){
         var date1 = document.getElementById("tanggal").value
+        var date1 = document.getElementById("tanggal1").value
         var datenow = new Date();
         var newdate1 = new Date(date1);
-        
+        var newdate2 = new Date(date2);
         var total =new Date();
 
-        total.setDate(datenow.getDate()-newdate1.getDate()); // minus the date
+        total.setDate(newdate2.getDate()-newdate1.getDate()); // minus the date
         alert('Selisih '+total.getDate());
         
     }
@@ -28,7 +29,9 @@
 
     <label for="birthday">Tanggal1:</label>
     <input type="date" id="tanggal" name="tanggal">
-   
+    <br>
+    <label for="birthday">Tanggal2:</label>
+    <input type="date" id="tanggal1" name="tanggal1">
     <input type="submit"  onclick="dateminus()">
   
   
